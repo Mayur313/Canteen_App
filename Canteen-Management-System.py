@@ -1,3 +1,5 @@
+import streamlit as st
+
 class Snack:
     def __init__(self, id, name, price, available):
         self.id = id
