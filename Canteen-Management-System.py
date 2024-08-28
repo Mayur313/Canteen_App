@@ -1,18 +1,16 @@
-import streamlit as st
-
 class Snack:
-    def _init_(self, id, name, price, available):
+    def __init__(self, id, name, price, available):
         self.id = id
         self.name = name
         self.price = price
         self.available = available
 
-    def _str_(self):
+    def __str__(self):
         return f"ID: {self.id}, Name: {self.name}, Price: {self.price}, Available: {self.available}"
 
 
 class Canteen:
-    def _init_(self):
+    def __init__(self):
         self.inventory = []
         self.sales_records = []
 
@@ -54,6 +52,7 @@ class Canteen:
 
     def display_sales_records(self):
         return [{"ID": snack.id, "Name": snack.name, "Price": snack.price, "Available": snack.available} for snack in self.sales_records]
+
 
 
 # Initialize session state if not already done
